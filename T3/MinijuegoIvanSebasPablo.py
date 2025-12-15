@@ -87,7 +87,7 @@ while turnsleft > 0: #El juego sigue mientras hay mas que 0 turnos restantes
                         print(f"Habeís adquirido {cantidad_compra} de {compra}. Os quedan {score} puntos")
                     else:
                         print("No hay suficiente dinero")
-                except TypeError: #ValueError #Les decimos si han introducido un valor que no vale
+                except ValueError: 
                     print("Cantidad inválida, la compra no fue realizada.")
         elif eleccion == 2:
             print("¿Que deseaís vender?")
@@ -114,7 +114,7 @@ while turnsleft > 0: #El juego sigue mientras hay mas que 0 turnos restantes
                         print(f"Vendiste {cantidad_venta} {objeto_venta} y ganaste {precio_venta} puntos. Ahora tienes {score} puntos")
                     else: #Si no tiene suficientes objetos para vender se lo decimos
                         print(f"No tienes suficiente/s {objeto_venta}")
-                except TypeError: #ValueError
+                except ValueError: 
                     print("Cantidad inválida, la venta no se ha podido realizar")
         elif eleccion == 3: #Al elegir la opción 3, le mostramos el inventario al usuario
             print(inventory)
